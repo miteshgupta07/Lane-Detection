@@ -12,6 +12,11 @@ This project implements lane detection on video streams using OpenCV and Python.
 - Average the detected lines to get a single left and right lane line
 - Fill the lane area with a specified color
 
+
+<img width="852" alt="image" src="https://github.com/miteshgupta07/Lane-Detection-Using-Computer-Vision/assets/111682782/11f05f8e-aca9-48d3-98d0-e71d8f5c0987">
+
+
+
 ## Installation
 
 1. Clone the repository:
