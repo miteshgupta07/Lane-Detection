@@ -73,7 +73,11 @@ def average_slope_intercept(image, lines):
 
 while (cap.isOpened()):
 
+    if cap.get(cv2.CAP_PROP_POS_FRAMES)==cap.get(cv2.CAP_PROP_FRAME_COUNT):
+        cap.set(cv2.CAP_PROP_POS_FRAMES,0)
+
     _, frame = cap.read()
+
     if frame is None:
         break
 
@@ -85,7 +89,10 @@ while (cap.isOpened()):
     filled_image = fill_lane(line_image, averaged_lines)
     combo_image = cv2.addWeighted(frame, 0.8, filled_image, 1, 1)
 
-    cv2.imshow("Image", combo_image)
+    frame=cv2.resize(frame,(640,360))
+    combo_image=cv2.resize(combo_image,(640,360))
+    cv2.imshow("Original Video", frame)
+    cv2.imshow("Lane detection", combo_image)
 
     if cv2.waitKey(1) & 0xFF == 27:
         cv2.destroyAllWindows()
