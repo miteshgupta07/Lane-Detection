@@ -1,5 +1,6 @@
-# Lane Detection
-
+<div align="center">
+<h1> 🛣️🚗 Lane Detection 🚗🛣️ </h1>
+</div>
 This project implements lane detection on video streams using OpenCV and Python. The lanes are detected using edge detection and Hough Line Transform, and the detected lanes are highlighted and filled with color in the output video.
 
 ## Features
